@@ -21,14 +21,10 @@ class Habit extends Component {
         this.setState({ count: count < 0 ? 0 : count });
     };
     render() {
-        //외부로부터 받아온 데이터는 props라는 클래스안에 있는 데이터에 저장되어진다.
-        // console.log(this.props.habitArray);
-        //const habitName = this.props.habitArray
-        const { name, count } = this.props.habitArray;
         return (
             <li className="habit">
-                <span className="habit-name">{name}</span>
-                <span className="habit-count">{count}</span>
+                <span className="habit-name">Reading</span>
+                <span className="habit-count">{this.state.count}</span>
                 <button
                     className="habit-button habit-increase"
                     onClick={this.handleIncrement}
