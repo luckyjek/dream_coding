@@ -1,4 +1,28 @@
-/*css 또한 순서에 맞춰서 ,  전체적으로 유니버셜하게 적용되는 아이 */
+* {
+    box-sizing: border-box;
+}
+.navbar {
+    font-size: 2rem;
+    padding: 1em;
+    background-color: blanchedalmond;
+}
+
+.navbar-logo {
+    color: green;
+    margin-right: 0.5em;
+}
+.navbar-count {
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-left: 0.2em;
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+}
 button {
     outline: none;
     border: 0;
