@@ -15,10 +15,15 @@ class Habits extends Component {
     handleDelete = (habit) => {
         this.props.onDelete(habit);
     };
+
+    handleAdd = (name) => {
+        this.props.onAdd(name);
+    };
     render() {
+        console.log(this.props.habits);
         return (
             <>
-                <HabitAddForm />
+                <HabitAddForm onAdd={this.handleAdd} />
                 <ul>
                     {
                         //JavaScript 사용시 code블럭 {} 사용
@@ -38,6 +43,9 @@ class Habits extends Component {
                         ))
                     }
                 </ul>
+                <button class="habits-reset" onClick={this.props.onReset}>
+                    Reset All
+                </button>
             </>
         );
     }

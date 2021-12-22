@@ -16,6 +16,7 @@ class Habit extends Component {
         this.props.onDelete(this.props.habit);
     };
     render() {
+        console.log(this.props.habit);
         //외부로부터 받아온 데이터는 props라는 클래스안에 있는 데이터에 저장되어진다.
         // console.log(this.props.habitArray);
         //const habitName = this.props.habitArray
