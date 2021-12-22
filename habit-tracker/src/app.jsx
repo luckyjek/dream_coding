@@ -11,22 +11,29 @@ class App extends Component {
             { id: 3, name: "Coding", count: 0 },
         ],
     };
+
     handleIncrement = (habit) => {
         // console.log(habit);
         // console.log(`handleIncrement ${habit.name}`);
         //...연산자-> https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-        const habits = [...this.state.habits];
-        const index = habits.indexOf(habit);
-        habits[index].count++;
-        this.setState({ habits: habits }); //value에서 쓰인것은 로컬에있는 habits!
+        const habits = this.state.habits.map((item) => {
+            if (item.id === habit.id) {
+                return { ...habit, count: habit.count + 1 };
+            }
+            return item;
+        });
+        this.setState({ habits }); //value에서 쓰인것은 로컬에있는 habits!
     };
 
     handleDecrement = (habit) => {
-        const habits = [...this.state.habits];
-        const index = habits.indexOf(habit);
-        const count = habits[index].count - 1;
-        habits[index].count = count < 0 ? 0 : count;
-        this.setState({ habits: habits });
+        const habits = this.state.habits.map((item) => {
+            if (item.id === habit.id) {
+                const count = habit.count - 1;
+                return { ...habit, count: count < 0 ? 0 : count };
+            }
+            return item;
+        });
+        this.setState({ habits });
     };
 
     handleDelete = (habit) => {
@@ -37,7 +44,7 @@ class App extends Component {
     handleAdd = (name) => {
         const habits = [
             ...this.state.habits,
-            { id: Date.now(), name: name, count: 0 },
+            { id: Date.now(), name, count: 0 },
         ];
         this.setState({ habits });
     };
@@ -46,13 +53,15 @@ class App extends Component {
         //habits를 빙글빙글 돌며 새롭게 데이터를 만들거기 때문에
         //map을 이용해야한다.
         const habits = this.state.habits.map((habit) => {
-            habit.count = 0;
+            if (habit.count !== 0) {
+                return { ...habit, count: 0 };
+            }
             return habit;
         });
         this.setState({ habits });
     };
+
     render() {
-        console.log("app");
         return (
             <>
                 <Navbar
