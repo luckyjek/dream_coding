@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Custom properties</title>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/--* -->
+        <style>
+            /*js처럼 변수를 선언해주는 것과 같다.*/
+            :root {
+                --background-color: thistle;
+                --text-color: blue;
+                --base-space: 8px;
+            }
+            .first-list {
+                background-color: var(--background-color);
+                color: var(--text-color);
+                margin-left: var(--base-space, 8);
+            }
+
+            .second-list {
+                background-color: var(--background-color);
+                color: whitesmoke;
+                margin-left: calc(var(--base-space) * 2);
+            }
+            /*간단하게 미디어쿼리에서 변수에 값만 변경하면 된다.
+            즉, 위의 .first-list와 .second-list를 일일이 정의하지 않아도 
+            간단하게 쓸 수 있는 장점이 있다.
+            https://github.com/luckyjek/TIL_/blob/edbcc0dd876238bd26f4936eddaac87b0c54cd57/TodayWorld/media-query/style.css
+            와 비교해보기
+            */
+            @media screen and (max-width: 768px) {
+                :root {
+                    --background-color: salmon;
+                    --text-color: white;
+                    --base-space: 4px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="first-list">
+            <li>Orange</li>
+            <li>Apple</li>
+        </ul>
+        <ul class="second-list">
+            <li>Korea</li>
+            <li>Japan</li>
+            <li>China</li>
+        </ul>
+    </body>
+</html>
