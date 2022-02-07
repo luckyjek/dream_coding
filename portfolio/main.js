@@ -12,6 +12,9 @@ document.addEventListener("scroll", () => {
         navbar.classList.remove("navbar--dark");
     }
 });
+//위의 로직을 이용해서 만약 메뉴를 클릭하면 
+//뷰포트 기준 그 섹션을 다 꽉 채운다.
+
 
 //Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
