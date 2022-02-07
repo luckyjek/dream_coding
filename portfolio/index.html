@@ -23,22 +23,22 @@
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <a href="#" class="navbar__logo"><img src="./imgs/logo.png" sizes="(min-width: 600px) 200px, 50vw"
-                    class="navbar__logo-img" alt="cafa898-8 logo"></a>
+            <a href="#" class="navbar__logo"><img src="./imgs/logo.png" alt="cafa898-8 logo"></a>
         </div>
-        <ul class="navbar__menu">
-            <li class="navbar__menu__item active" data-link="#home">
-                Home
-            </li>
-            <li class="navbar__menu__item" data-link="#about">About</li>
-            <li class="navbar__menu__item" data-link="#skills">Skills</li>
-            <li class="navbar__menu__item" data-link="#work">My work</li>
-            <li class="navbar__menu__item" data-link="#testimonials">
-                Testimonial
-            </li>
-            <li class="navbar__menu__item" data-link="#contact">Contact</li>
-        </ul>
-
+        <div>
+            <ul class="navbar__menu">
+                <!-- <li class="navbar__menu__item active" data-link="#home">
+                    Home
+                </li> -->
+                <li class="navbar__menu__item" data-link="#about">Store</li>
+                <li class="navbar__menu__item" data-link="#skills">Story</li>
+                <li class="navbar__menu__item" data-link="#work">Products</li>
+                <li class="navbar__menu__item" data-link="#testimonials">
+                    Magazine
+                </li>
+                <li class="navbar__menu__item" data-link="#contact">Contact</li>
+            </ul>
+        </div>
         <!--Toggle button-->
         <button class="navbar__toggle-btn">
             <i class="fas fa-bars"></i>
@@ -51,10 +51,17 @@
 
             <!-- <h1 class="home__title">Hello, <br />I'm FrontEnd-developer</h1> -->
             <h2 class="home__description">
-                강조하고싶은 문장 (cafe를 잘 나타내는)
+                <!-- 강조하고싶은 문장 (cafe를 잘 나타내는) -->
+                전진 디자이너가 조색 및 직접 만드는 수제
+                <br />
+                b.마카롱 b.마들렌
+                <br />
+                <br />
+                분위기에 취하고싶다면?
+
             </h2>
             <button class="home__contact" data-link="#contact">
-                Contact Me
+                Contact Us
             </button>
         </div>
     </section>
@@ -295,17 +302,21 @@
 
     <!-- Contact -->
     <section id="contact" class="section">
-        <h1 class="contact__title">Let's talk</h1>
-        <h2 class="contact__email">thxjek@gmail.com</h2>
+        <h1 class="contact__title">Contact Us</h1>
         <div class="contact__links">
-            <a href="https://github.com/luckyjek" target="_blank">
-                <i class="fab fa-github"></i>
+            <a href="https://www.instagram.com/cafe_8988/" target="_blank">
+                <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" target="_blank">
-                <i class="fa fa-linkedin-square"></i>
-            </a>
+            <!-- https://sebhastian.com/html-hover-text/ -->
+            <span class="hovertext" data-hover="070-4068-8988">
+                <i class="fas fa-phone-square-alt"></i>
+            </span>
         </div>
-        <p class="contact__rights">2020 Dream Coding Elin</p>
+
+        <hr />
+        <div class="contact__addr ">
+            <span>All Rights Reserved &copy; Cafe898-8 CO.</span>
+        </div>
     </section>
 
     <!--Arrow up-->

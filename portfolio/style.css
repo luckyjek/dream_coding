@@ -41,7 +41,7 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "Nanum Brush Script", sans-serif;
     margin: 0;
     cursor: default;
 }
@@ -98,11 +98,12 @@ p {
 /* Navbar */
 #navbar {
     position: fixed;
+    text-align: center;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     background-color: transparent;
-    align-items: center;
+    /* align-items: center; */
     padding: 16px;
     transition: all var(--animation-duration) ease-in-out;
     z-index: 1;
@@ -111,9 +112,13 @@ p {
 #navbar.navbar--dark {
     background-color: var(--color-main);
     padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar__logo {
+    align-items: center;
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: white;
@@ -122,6 +127,8 @@ p {
 
 .navbar__menu {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar__menu__item {
@@ -171,21 +178,23 @@ p {
 
 .home__title,
 .home__description {
-    color: var(--color-orange);
+    font-size: var(--font-large);
+    color: #412e08;
+    margin-top: 20%;
 }
 
 .home__contact {
-    color: var(--color-orange);
+    color: var(--color-main);
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
     margin: 24px;
     padding: 8px 12px;
-    border: 2px solid var(--color-orange);
+    border: 2px solid var(--color-main);
     border-radius: var(--size-border-radius);
 }
 
 .home__contact:hover {
-    background-color: var(--color-pink);
+    /* background-color: var(--color-pink); */
 }
 
 /*Section common*/
@@ -474,7 +483,7 @@ p {
 
 .contact__title,
 .contact__email,
-.contact__rights {
+.fa-phone-square-alt {
     color: var(--color-white);
 }
 
@@ -488,9 +497,37 @@ p {
     transition: all var(--animation-duration) ease-in;
 }
 
+.hovertext {
+    position: relative;
+}
+
+.hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 150px;
+    background-color: wheat;
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 1px;
+    left: 50px;
+    font-size: var(--font-small);
+    position: absolute;
+    z-index: 1;
+}
+
+.hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
 .contact__links i:hover {
     transform: scale(1.1);
     color: var(--color-yellow);
+}
+
+.contact__addr {
+    color: var(--color-white)
 }
 
 /*Scroll*/
@@ -536,7 +573,7 @@ p {
     #navbar {
         flex-direction: column;
         align-items: flex-start;
-        background-color: var(--color-pink);
+        background-color: var(--color-main);
     }
 
     #navbar.navbar--dark {
@@ -553,6 +590,10 @@ p {
 
     .navbar__menu.open {
         display: block;
+    }
+
+    .navbar__logo {
+        margin-left: 0px;
     }
 
     .section {
