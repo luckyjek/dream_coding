@@ -112,6 +112,7 @@ const navItems = sectionIds.map((id) =>
 
 let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
+
 function selectNavItem(selected) {
     selectedNavItem.classList.remove("active");
     selectedNavItem = selected;
@@ -123,7 +124,9 @@ function selectNavItem(selected) {
 /*코드가 중복이 되므로 함수를 하나 만든다.*/
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollTo.scrollIntoView({
+        behavior: "smooth"
+    });
     selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 const observerOptions = {
