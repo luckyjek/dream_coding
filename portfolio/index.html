@@ -1,375 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Elin's Portfolio</title>
-        <meta
-            name="description"
-            content="Portfolio for world-renowned software engineer Elin"
-        />
-        <meta name="author" content="Elin" />
-        <link rel="icon" type="image/png" href="imgs/favicon.png" />
-        <script
-            src="https://kit.fontawesome.com/1192e39070.js"
-            crossorigin="anonymous"
-        ></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <script src="main.js" defer>
-            <i class="fas fa-hamburger"></i>
-        </script>
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav id="navbar">
-            <div class="navbar__logo">
-                <i class="fab fa-diaspora"></i>
-                <a href="#">Elin</a>
-            </div>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cafe898-8</title>
+    <meta name="description" content="Portfolio for world-renowned software engineer Elin" />
+    <meta name="author" content="Elin" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script src="https://kit.fontawesome.com/1192e39070.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer>
+        // < i class = "fas fa-hamburger" > < /i>
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <a href="#" class="navbar__logo"><img src="./imgs/logo.png" alt="cafa898-8 logo"></a>
+        </div>
+        <div>
             <ul class="navbar__menu">
-                <li class="navbar__menu__item active" data-link="#home">
+                <!-- <li class="navbar__menu__item active" data-link="#home">
                     Home
-                </li>
-                <li class="navbar__menu__item" data-link="#about">About</li>
-                <li class="navbar__menu__item" data-link="#skills">Skills</li>
-                <li class="navbar__menu__item" data-link="#work">My work</li>
+                </li> -->
+                <li class="navbar__menu__item" data-link="#about">Store</li>
+                <li class="navbar__menu__item" data-link="#skills">Story</li>
+                <li class="navbar__menu__item" data-link="#work">Products</li>
                 <li class="navbar__menu__item" data-link="#testimonials">
-                    Testimonial
+                    Magazine
                 </li>
                 <li class="navbar__menu__item" data-link="#contact">Contact</li>
             </ul>
+        </div>
+        <!--Toggle button-->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
 
-            <!--Toggle button-->
-            <button class="navbar__toggle-btn">
-                <i class="fas fa-bars"></i>
+    <!-- Home -->
+    <section id="home">
+        <div class="home__container">
+
+            <!-- <h1 class="home__title">Hello, <br />I'm FrontEnd-developer</h1> -->
+            <h2 class="home__description">
+                <!-- 강조하고싶은 문장 (cafe를 잘 나타내는) -->
+                전진 디자이너가 조색 및 직접 만드는 수제
+                <br />
+                b.마카롱 b.마들렌
+                <br />
+                <br />
+                분위기에 취하고싶다면?
+
+            </h2>
+            <button class="home__contact" data-link="#contact">
+                Contact Us
             </button>
-        </nav>
+        </div>
+    </section>
 
-        <!-- Home -->
-        <section id="home">
-            <div class="home__container">
-                <img
-                    src="imgs/luckyjek.png"
-                    alt="Elin's profile photo"
-                    class="home__avatar"
-                />
-                <h1 class="home__title">Hello, <br />I'm FrontEnd-developer</h1>
-                <h2 class="home__description">
-                    강조하고싶은 문장 (나를 잘 나타내는)
-                </h2>
-                <button class="home__contact" data-link="#contact">
-                    Contact Me
+    <!-- About -->
+    <section id="about" class="section section__container">
+        <h1>About me</h1>
+        <p>
+            경력을 나타내는 말들, 예를들어 뭐로 4년일했고, 프로젝트들을
+            맡아서했고, 프론트엔드엥서 어떤어떤 뭐 프레임워크를 써서
+            일을하고있다
+        </p>
+        <div class="about__majors">
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h2 class="major__title">Front-end</h2>
+                <div class="major__description">HTML, CSS, JavaScript</div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h2 class="major__title">Framework</h2>
+                <div class="major__description">React</div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h2 class="major__title">Post CSS</h2>
+                <div class="major__description">CSS</div>
+            </div>
+        </div>
+        <div class="about__jobs">
+            <div class="job">
+                <img src="" alt="logo" class="job__logo" />
+                <div class="job__description">
+                    <p class="job__name">丁和李朴</p>
+                    <p class="job__period">2016.09~2020.06</p>
+                </div>
+            </div>
+
+            <div class="job">
+                <img src="" alt="logo" class="job__logo" />
+                <div class="job__description">
+                    <p class="job__name">丁和李朴</p>
+                    <p class="job__period">2016.09~2020.06</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p>
+                새로운거 배우는데 관심있고, 팀환경에서 일하거나 혼자서 일할
+                수도있다. 계획세우고, 시간도 잘지키고 등
+            </p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>HTML</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 99%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>HTML</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>HTML</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>HTML</span>
+                            <span>99%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>Visual Studio Code</span></li>
+                            <li><span>...</span></li>
+                            <li><span>...</span></li>
+                            <li><span>...</span></li>
+                            <li><span>...</span></li>
+                        </ul>
+                    </div>
+                    <div class="etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul class="etc__list">
+                            <li><span>Git</span></li>
+                            <li><span>Marketing</span></li>
+                            <li><span>...</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+        <div class="section__container">
+            <h1>My work</h1>
+            <h2>Projects</h2>
+            <div class="work__categories">
+                <button class="category__btn selected" data-filter="*">
+                    All<span class="category__count">6</span>
+                </button>
+                <button class="category__btn" data-filter="front-end">
+                    Front-end<span class="category__count">3</span>
+                </button>
+                <button class="category__btn" data-filter="back-end">
+                    Back-end<span class="category__count">2</span>
+                </button>
+                <button class="category__btn" data-filter="mobile">
+                    Mobile<span class="category__count">1</span>
                 </button>
             </div>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="section section__container">
-            <h1>About me</h1>
-            <p>
-                경력을 나타내는 말들, 예를들어 뭐로 4년일했고, 프로젝트들을
-                맡아서했고, 프론트엔드엥서 어떤어떤 뭐 프레임워크를 써서
-                일을하고있다
-            </p>
-            <div class="about__majors">
-                <div class="major">
-                    <div class="major__icon">
-                        <i class="fab fa-html5"></i>
+            <div class="work__projects">
+                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank"
+                    data-type="front-end">
+                    <img src="" class="project__img" alt="NFT" />
+                    <div class="project__description">
+                        <h3>donate NFT</h3>
+                        <span>Clone coding with HTML and CSS</span>
                     </div>
-                    <h2 class="major__title">Front-end</h2>
-                    <div class="major__description">HTML, CSS, JavaScript</div>
-                </div>
-                <div class="major">
-                    <div class="major__icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h2 class="major__title">Framework</h2>
-                    <div class="major__description">React</div>
-                </div>
-                <div class="major">
-                    <div class="major__icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h2 class="major__title">Post CSS</h2>
-                    <div class="major__description">CSS</div>
-                </div>
-            </div>
-            <div class="about__jobs">
-                <div class="job">
-                    <img src="" alt="logo" class="job__logo" />
-                    <div class="job__description">
-                        <p class="job__name">丁和李朴</p>
-                        <p class="job__period">2016.09~2020.06</p>
-                    </div>
-                </div>
-
-                <div class="job">
-                    <img src="" alt="logo" class="job__logo" />
-                    <div class="job__description">
-                        <p class="job__name">丁和李朴</p>
-                        <p class="job__period">2016.09~2020.06</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="section">
-            <div class="section__container">
-                <h1>Skills</h1>
-                <h2>Skills & Attributes</h2>
-                <p>
-                    새로운거 배우는데 관심있고, 팀환경에서 일하거나 혼자서 일할
-                    수도있다. 계획세우고, 시간도 잘지키고 등
-                </p>
-                <div class="skillset">
-                    <div class="skillset__left">
-                        <h3 class="skillset__title">Skills</h3>
-                        <div class="skill">
-                            <div class="skill__description">
-                                <span>HTML</span>
-                                <span>99%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div
-                                    class="skill__value"
-                                    style="width: 99%"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill__description">
-                                <span>HTML</span>
-                                <span>99%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div
-                                    class="skill__value"
-                                    style="width: 90%"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill__description">
-                                <span>HTML</span>
-                                <span>99%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div
-                                    class="skill__value"
-                                    style="width: 80%"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill__description">
-                                <span>HTML</span>
-                                <span>99%</span>
-                            </div>
-                            <div class="skill__bar">
-                                <div
-                                    class="skill__value"
-                                    style="width: 90%"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skillset__right">
-                        <div class="tools">
-                            <h3 class="skillset__title">Tools</h3>
-                            <ul class="tools__list">
-                                <li><span>Visual Studio Code</span></li>
-                                <li><span>...</span></li>
-                                <li><span>...</span></li>
-                                <li><span>...</span></li>
-                                <li><span>...</span></li>
-                            </ul>
-                        </div>
-                        <div class="etc">
-                            <h3 class="skillset__title">Etc</h3>
-                            <ul class="etc__list">
-                                <li><span>Git</span></li>
-                                <li><span>Marketing</span></li>
-                                <li><span>...</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Work -->
-        <section id="work" class="section">
-            <div class="section__container">
-                <h1>My work</h1>
-                <h2>Projects</h2>
-                <div class="work__categories">
-                    <button class="category__btn selected" data-filter="*">
-                        All<span class="category__count">6</span>
-                    </button>
-                    <button class="category__btn" data-filter="front-end">
-                        Front-end<span class="category__count">3</span>
-                    </button>
-                    <button class="category__btn" data-filter="back-end">
-                        Back-end<span class="category__count">2</span>
-                    </button>
-                    <button class="category__btn" data-filter="mobile">
-                        Mobile<span class="category__count">1</span>
-                    </button>
-                </div>
-                <div class="work__projects">
-                    <a
-                        href="https://github.com/luckyjek/NFT-Hackathon"
-                        class="project"
-                        target="blank"
-                        data-type="front-end"
-                    >
-                        <img src="" class="project__img" alt="NFT" />
-                        <div class="project__description">
-                            <h3>donate NFT</h3>
-                            <span>Clone coding with HTML and CSS</span>
-                        </div>
-                    </a>
-                    <a
-                        href="https://github.com/luckyjek/NFT-Hackathon"
-                        class="project"
-                        target="blank"
-                        data-type="back-end"
-                    >
-                        <img src="" class="project__img" alt="NFT" />
-                        <div class="project__description">
-                            <h3>donate NFT</h3>
-                            <span>Clone coding with HTML and CSS</span>
-                        </div>
-                    </a>
-                    <a
-                        href="https://github.com/luckyjek/NFT-Hackathon"
-                        class="project"
-                        target="blank"
-                        data-type="front-end"
-                    >
-                        <img src="" class="project__img" alt="NFT" />
-                        <div class="project__description">
-                            <h3>donate NFT</h3>
-                            <span>Clone coding with HTML and CSS</span>
-                        </div>
-                    </a>
-                    <a
-                        href="https://github.com/luckyjek/NFT-Hackathon"
-                        class="project"
-                        target="blank"
-                        data-type="mobile"
-                    >
-                        <img src="" class="project__img" alt="NFT" />
-                        <div class="project__description">
-                            <h3>donate NFT</h3>
-                            <span>Clone coding with HTML and CSS</span>
-                        </div>
-                    </a>
-                    <a
-                        href="https://github.com/luckyjek/NFT-Hackathon"
-                        class="project"
-                        target="blank"
-                        data-type="back-end"
-                    >
-                        <img src="" class="project__img" alt="NFT" />
-                        <div class="project__description">
-                            <h3>donate NFT</h3>
-                            <span>Clone coding with HTML and CSS</span>
-                        </div>
-                    </a>
-                    <a
-                        href="https://github.com/luckyjek/NFT-Hackathon"
-                        class="project"
-                        target="blank"
-                        data-type="front-end"
-                    >
-                        <img src="" class="project__img" alt="NFT" />
-                        <div class="project__description">
-                            <h3>donate NFT</h3>
-                            <span>Clone coding with HTML and CSS</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section id="testimonials" class="section">
-            <div class="section__container">
-                <h1>Testimonials</h1>
-                <h3>See what they say about me</h3>
-                <div class="testimonials">
-                    <div class="testimonial">
-                        <img
-                            src="imgs/testimonial/people1.jpg"
-                            alt="People"
-                            class="testimonial__avatar"
-                        />
-                        <div class="testimonal__speech-bubble">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Beatae eveniet quas
-                                consectetur aperiam pariatur officia nisi,
-                                inventore cumque tempore sapiente, voluptates
-                                sint iste molestiae est? Maxime tenetur
-                                voluptatem ut rem.
-                            </p>
-                            <p class="name">
-                                <a href="">Elin</a> / dinghelipiao
-                            </p>
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonal__speech-bubble">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Beatae eveniet quas
-                                consectetur aperiam pariatur officia nisi,
-                                inventore cumque tempore sapiente, voluptates
-                                sint iste molestiae est? Maxime tenetur
-                                voluptatem ut rem.
-                            </p>
-                            <p class="name">
-                                <a href="">Elin</a> / dinghelipiao
-                            </p>
-                        </div>
-                        <img
-                            src="imgs/testimonial/people1.jpg"
-                            alt="People"
-                            class="testimonial__avatar"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section">
-            <h1 class="contact__title">Let's talk</h1>
-            <h2 class="contact__email">thxjek@gmail.com</h2>
-            <div class="contact__links">
-                <a href="https://github.com/luckyjek" target="_blank">
-                    <i class="fab fa-github"></i>
                 </a>
-                <a href="#" target="_blank">
-                    <i class="fa fa-linkedin-square"></i>
+                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank" data-type="back-end">
+                    <img src="" class="project__img" alt="NFT" />
+                    <div class="project__description">
+                        <h3>donate NFT</h3>
+                        <span>Clone coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank"
+                    data-type="front-end">
+                    <img src="" class="project__img" alt="NFT" />
+                    <div class="project__description">
+                        <h3>donate NFT</h3>
+                        <span>Clone coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank" data-type="mobile">
+                    <img src="" class="project__img" alt="NFT" />
+                    <div class="project__description">
+                        <h3>donate NFT</h3>
+                        <span>Clone coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank" data-type="back-end">
+                    <img src="" class="project__img" alt="NFT" />
+                    <div class="project__description">
+                        <h3>donate NFT</h3>
+                        <span>Clone coding with HTML and CSS</span>
+                    </div>
+                </a>
+                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank"
+                    data-type="front-end">
+                    <img src="" class="project__img" alt="NFT" />
+                    <div class="project__description">
+                        <h3>donate NFT</h3>
+                        <span>Clone coding with HTML and CSS</span>
+                    </div>
                 </a>
             </div>
-            <p class="contact__rights">2020 Dream Coding Elin</p>
-        </section>
+        </div>
+    </section>
 
-        <!--Arrow up-->
-        <button class="arrow-up">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-    </body>
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="section__container">
+            <h1>Testimonials</h1>
+            <h3>See what they say about me</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="imgs/testimonial/people1.jpg" alt="People" class="testimonial__avatar" />
+                    <div class="testimonal__speech-bubble">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Beatae eveniet quas
+                            consectetur aperiam pariatur officia nisi,
+                            inventore cumque tempore sapiente, voluptates
+                            sint iste molestiae est? Maxime tenetur
+                            voluptatem ut rem.
+                        </p>
+                        <p class="name">
+                            <a href="">Elin</a> / dinghelipiao
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonal__speech-bubble">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Beatae eveniet quas
+                            consectetur aperiam pariatur officia nisi,
+                            inventore cumque tempore sapiente, voluptates
+                            sint iste molestiae est? Maxime tenetur
+                            voluptatem ut rem.
+                        </p>
+                        <p class="name">
+                            <a href="">Elin</a> / dinghelipiao
+                        </p>
+                    </div>
+                    <img src="imgs/testimonial/people1.jpg" alt="People" class="testimonial__avatar" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h1 class="contact__title">Contact Us</h1>
+        <div class="contact__links">
+            <a href="https://www.instagram.com/cafe_8988/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- https://sebhastian.com/html-hover-text/ -->
+            <span class="hovertext" data-hover="070-4068-8988">
+                <i class="fas fa-phone-square-alt"></i>
+            </span>
+        </div>
+
+        <hr />
+        <div class="contact__addr ">
+            <span>All Rights Reserved &copy; Cafe898-8 CO.</span>
+        </div>
+    </section>
+
+    <!--Arrow up-->
+    <button class="arrow-up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+
 </html>
