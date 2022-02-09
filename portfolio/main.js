@@ -1,4 +1,8 @@
 "use strict";
+//magazine
+const firstSlide = document.querySelector('.slider__item:first-child');
+const lastSlide = document.querySelector('.slider__item:last-child');
+
 
 //Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
