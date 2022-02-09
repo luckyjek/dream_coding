@@ -20,6 +20,8 @@
 </head>
 
 <body>
+    <img class="target" src="./imgs/macaron-ms.png" alt="macaron image">
+
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
@@ -31,12 +33,12 @@
                     Home
                 </li> -->
                 <li class="navbar__menu__item" data-link="#about"> <i class="fas fa-store-alt"></i> Story</li>
-                <li class="navbar__menu__item" data-link="#skills"> <i class="fas fa-mug-hot"></i> Products</li>
-                <li class="navbar__menu__item" data-link="#work"> <i class="far fa-clipboard"></i> Magazine</li>
+                <li class="navbar__menu__item" data-link="#skills"> <i class="far fa-clipboard"></i> Magazine</li>
+                <li class="navbar__menu__item" data-link="#work"><i class="fas fa-mug-hot"></i> Products</li>
                 <li class="navbar__menu__item" data-link="#testimonials">
                     <i class="fas fa-map-marker-alt"></i> Store
                 </li>
-                <li class="navbar__menu__item" data-link="#contact"> <i class="fab fa-instagram"></i> Instagram</li>
+                <li class="navbar__menu__item" data-link="#contact"> <i class="fab fa-instagram"></i> 인스타그램</li>
             </ul>
         </div>
         <!--Toggle button-->
@@ -52,18 +54,14 @@
             <!-- <h1 class="home__title">Hello, <br />I'm FrontEnd-developer</h1> -->
             <h2 class="home__description">
                 <!-- 강조하고싶은 문장 (cafe를 잘 나타내는) -->
-                전직 디자이너가 조색 및 직접 만드는 수제
-                <br />
-                b.마카롱 b.마들렌
-                <br />
+                전직 디자이너가 조색 및 직접 만드는 수제 디저트
                 <br />
                 분위기에 취하고싶다면?
-
             </h2>
-            <button class="home__contact" data-link="#contact">
-                Contact Us
-            </button>
         </div>
+        <button class="home__contact" data-link="#contact">
+            Contact Us
+        </button>
     </section>
 
     <!-- Story -->
@@ -129,7 +127,7 @@
     <!-- Skills -->
     <section id="skills" class="section">
         <div class="section__container">
-            <h1><i class="fas fa-mug-hot"></i> Products</h1>
+            <h1><i class="far fa-clipboard"></i> Magazine</h1>
             <h2>Skills & Attributes</h2>
             <p>
                 새로운거 배우는데 관심있고, 팀환경에서 일하거나 혼자서 일할
@@ -203,9 +201,10 @@
     <!-- Work -->
     <section id="work" class="section">
         <div class="section__container">
-            <h1><i class="far fa-clipboard"></i> Magazine</h1>
-            <h2>Projects</h2>
-            <div class="work__categories">
+            <h1><i class="fas fa-mug-hot"></i> Products</h1>
+            <h2>인기메뉴를 소개합니다</h2>
+            <br />
+            <!-- <div class="work__categories">
                 <button class="category__btn selected" data-filter="*">
                     All<span class="category__count">6</span>
                 </button>
@@ -218,20 +217,20 @@
                 <button class="category__btn" data-filter="mobile">
                     Mobile<span class="category__count">1</span>
                 </button>
-            </div>
+            </div> -->
             <div class="work__projects">
                 <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank"
                     data-type="front-end">
-                    <img src="" class="project__img" alt="NFT" />
+                    <img src="./imgs/products/macaron.jpeg" class="project__img" alt="NFT" />
                     <div class="project__description">
-                        <h3>donate NFT</h3>
+                        <h3>마카롱</h3>
                         <span>Clone coding with HTML and CSS</span>
                     </div>
                 </a>
                 <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank" data-type="back-end">
-                    <img src="" class="project__img" alt="NFT" />
+                    <img src="./imgs/products/affogare.jpeg" class="project__img" alt="NFT" />
                     <div class="project__description">
-                        <h3>donate NFT</h3>
+                        <h3>아보카도</h3>
                         <span>Clone coding with HTML and CSS</span>
                     </div>
                 </a>

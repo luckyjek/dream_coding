@@ -15,6 +15,16 @@ document.addEventListener("scroll", () => {
 //위의 로직을 이용해서 만약 메뉴를 클릭하면 
 //뷰포트 기준 그 섹션을 다 꽉 채운다.
 
+//MouseEvent
+const target = document.querySelector('.target');
+
+document.addEventListener('mousemove', (event) => {
+    const x = event.pageX;
+    const y = event.pageY;
+
+    target.style.left = `${x}px`
+    target.style.top = `${y}px`
+});
 
 //Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
@@ -68,33 +78,33 @@ arrowUp.addEventListener("click", () => {
 const workBtnContainer = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
-workBtnContainer.addEventListener("click", (e) => {
-    const filter =
-        e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    if (filter == null) {
-        return;
-    }
-    //Remove selection from the previous item and select the new one.
-    const active = document.querySelector(".category__btn.selected");
-    active.classList.remove("selected");
-    //only button
-    const target =
-        e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
-    target.classList.add("selected");
+// workBtnContainer.addEventListener("click", (e) => {
+//     const filter =
+//         e.target.dataset.filter || e.target.parentNode.dataset.filter;
+//     if (filter == null) {
+//         return;
+//     }
+//     //Remove selection from the previous item and select the new one.
+//     const active = document.querySelector(".category__btn.selected");
+//     active.classList.remove("selected");
+//     //only button
+//     const target =
+//         e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+//     target.classList.add("selected");
 
-    projectContainer.classList.add("anim-out");
-    setTimeout(() => {
-        projects.forEach((project) => {
-            console.log(project.dataset.type);
-            if (filter === "*" || filter === project.dataset.type) {
-                project.classList.remove("invisible");
-            } else {
-                project.classList.add("invisible");
-            }
-        });
-        projectContainer.classList.remove("anim-out");
-    }, 300);
-});
+//     projectContainer.classList.add("anim-out");
+//     setTimeout(() => {
+//         projects.forEach((project) => {
+//             console.log(project.dataset.type);
+//             if (filter === "*" || filter === project.dataset.type) {
+//                 project.classList.remove("invisible");
+//             } else {
+//                 project.classList.add("invisible");
+//             }
+//         });
+//         projectContainer.classList.remove("anim-out");
+//     }, 300);
+// });
 //1.모든 섹션 요소들과 메뉴아이템들을 가지고온다.
 //2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
 //3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
@@ -114,15 +124,15 @@ const navItems = sectionIds.map((id) =>
 );
 
 let selectedNavIndex = 0;
-let selectedNavItem = navItems[0];
+// let selectedNavItem = navItems[0];
 
 function selectNavItem(selected) {
-    selectedNavItem.classList.remove("active");
-    selectedNavItem = selected;
-    selectedNavItem.classList.add("active");
+    // selectedNavItem.classList.remove("active");
+    // selectedNavItem = selected;
+    // selectedNavItem.classList.add("active");
 }
-// console.log(sections);
-// console.log(navItems);
+console.log(sections);
+console.log(navItems);
 
 /*코드가 중복이 되므로 함수를 하나 만든다.*/
 function scrollIntoView(selector) {
