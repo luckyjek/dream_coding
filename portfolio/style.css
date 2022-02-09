@@ -330,10 +330,12 @@ p {
 
 .skillset__left {
     flex-basis: 60%;
-    height: 300px;
+    height: 400px;
+    /* flex-direction: column; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 /* sum = left, right */
@@ -344,9 +346,11 @@ p {
     position: relative;
 }
 
+.posi {}
+
 .slider__item {
     width: 60%;
-    height: 300px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -357,20 +361,36 @@ p {
     opacity: 0;
     transition: all .5s ease-in-out;
     transform: scale(0.9);
+    background-size: contain;
+    background-repeat: no-repeat;
 
 }
 
+.slider__item1 {
+    background-image: url(/imgs/magazine/macaron.jpg);
+
+}
+
+.slider__item2 {
+    background-image: url(/imgs/magazine/comment.jpg);
+}
+
+.slider__item3 {
+    background-image: url(/imgs/magazine/yogiyo.jpg);
+}
+
+
 .slider__item:nth-child(odd) {
-    background-color: #8e44ad;
+    /* background-color: #8e44ad; */
 }
 
 .slider__item:nth-child(even) {
-    background-color: #3498db;
+    /* background-color: #3498db; */
 }
 
 .showing {
     opacity: 1;
-    z-index: 1;
+    /* z-index: 1; */
     transform: none;
 }
 

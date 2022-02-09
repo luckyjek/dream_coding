@@ -3,6 +3,50 @@
 const firstSlide = document.querySelector('.slider__item:first-child');
 const lastSlide = document.querySelector('.slider__item:last-child');
 
+function nextSlide() { //자동으로 작동하는 캐로쉘의 slide 함수와 같다.
+    const currentSlide = document.querySelector('.showing');
+    if (currentSlide) {
+        currentSlide.classList.remove('showing');
+        const nextSlide = currentSlide.nextElementSibling;
+
+        if (nextSlide) {
+            nextSlide.classList.add('showing');
+        } else {
+            firstSlide.classList.add('showing');
+        }
+    } else {
+        firstSlide.classList.add('showing');
+    }
+}
+
+/*  nextSlide 함수에서는 다음 형제 노드를 가져왔고, 마지막 이미지 요소가 
+ **  showing 클래스를 가지고 있을 때 next 버튼(오른쪽 화살표)이 click 되었다면 
+ **  다시 첫번째 이미지 요소에 showing 클래스를 추가했다.
+ **
+ **  prevSlide 함수에서는 다음 형제 노드 대신 이전 형제 노드를 가져오는 것, 첫 이미지 요소가 
+ **  showing 클래스를 가지고 있을 때 prev 버튼(왼쪽 화살표)이 click 되었다면
+ **  마지막 이미지 요소에 showing 클래스를 추가하는 것이 다르다.
+ */
+
+function prevSlide() {
+    const currentSlide = document.querySelector('.showing');
+    if (currentSlide) {
+        currentSlide.classList.remove('showing');
+        const prevSlide = currentSlide.previousElementSibling;
+
+        if (prevSlide) {
+            prevSlide.classList.add('showing');
+        } else {
+            lastSlide.classList.add('showing');
+        }
+    } else {
+        lastSlide.classList.add('showing');
+    }
+}
+
+document.getElementById('prev').addEventListener('click', prevSlide);
+document.getElementById('next').addEventListener('click', nextSlide);
+
 
 //Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
