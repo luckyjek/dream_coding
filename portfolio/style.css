@@ -345,16 +345,20 @@ p {
     display: flex;
     /* height: 500px; */
     position: relative;
+    justify-content: center;
 }
 
-.posi {}
+.posi {
+    display: flex;
+    justify-content: center;
+}
 
 .slider__item {
     width: 60%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     color: white;
     position: absolute;
     top: 0;

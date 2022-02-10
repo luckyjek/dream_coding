@@ -8,7 +8,6 @@ function nextSlide() { //자동으로 작동하는 캐로쉘의 slide 함수와 
     if (currentSlide) {
         currentSlide.classList.remove('showing');
         const nextSlide = currentSlide.nextElementSibling;
-
         if (nextSlide) {
             nextSlide.classList.add('showing');
         } else {
