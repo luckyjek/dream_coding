@@ -20,6 +20,7 @@
     --font-large: 48px;
     --font-medium: 28px;
     --font-regular: 18px;
+    /* --font-small: 16px; */
     --font-small: 16px;
     --font-micro: 14px;
 
@@ -127,16 +128,21 @@ p {
 }
 
 #navbar.navbar--dark {
-    background-color: var(--color-main);
+    /* background-color: var(--color-main); */
+    background-color: transparent;
     padding: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.navbar__logo-img {
+    height: 80px;
+}
+
 .navbar__logo {
     align-items: center;
-    font-size: var(--font-medium);
+    font-size: var(--font-lar);
     font-weight: var(--weight-semi-bold);
     color: white;
     margin-left: 20px
@@ -148,18 +154,37 @@ p {
     justify-content: center;
 }
 
+.navbar__menu>li {
+    display: inline-block;
+    margin: 0;
+}
+
+.navbar__menu>li::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #a09785;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.navbar__menu>li:hover::after {
+    transform: scaleX(1);
+}
+
 .navbar__menu__item {
     padding: 8px 12px;
     margin: 0 4px;
-    color: var(--color-white);
+    color: var(--color-main);
+
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: var(--size-border-radius);
+    font-size: 23px;
 }
 
-.navbar__menu__item.active {
+/* .navbar__menu__item.active {
     border: 2px solid var(--color-orange);
-}
+} */
 
 .navbar__menu__item:hover {
     border: 1px solid var(--color-white);
@@ -211,9 +236,6 @@ p {
     margin-top: 100px;
 }
 
-
-
-
 .home__contact:hover {
     /* background-color: var(--color-pink); */
 }
@@ -225,7 +247,7 @@ p {
     padding-left: 50px;
     padding-top: 90px;
     padding-bottom: 100px;
-    text-align: center;
+    text-align: left;
     /* margin: auto; */
 }
 
@@ -366,14 +388,13 @@ p {
     opacity: 0;
     transition: all .5s ease-in-out;
     transform: scale(0.9);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 
 }
 
 .slider__item1 {
     background-image: url(/imgs/magazine/macaron.jpg);
-
 }
 
 .slider__item2 {
@@ -399,31 +420,22 @@ p {
     transform: none;
 }
 
+.slider__btn {
+    background-color: var(--color-main);
+    border-radius: 50%;
+}
+
 #prev,
 #next {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-    /* position: absolute; */
     top: 0;
     z-index: 2;
     padding-left: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     font-size: 50px;
     font-weight: 700;
     cursor: pointer;
 }
-
-/* #prev {
-    left: 0;
-    position: absolute;
-}
-
-#next {
-    right: 0;
-    position: absolute;
-} */
 
 .skillset__title {
     color: var(--color-white);
@@ -505,7 +517,7 @@ p {
 
 .work__projects {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: unset;
     justify-content: center;
     opacity: 1;
     transition: all var(--animation-duration) ease-out;
@@ -574,6 +586,16 @@ p {
     transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+}
+
+.store__cafe-map {
+    width: 350px;
+    height: 350px;
 }
 
 /*Testimonial*/
@@ -707,12 +729,11 @@ p {
         --font-micro: 12px;
     }
 
-
     .navbar__toggle-btn {
         display: block;
         top: 34px;
         right: 42px;
-        font-size: var(--font0medium);
+        font-size: var(--font-large);
     }
 
     #navbar {
@@ -725,20 +746,31 @@ p {
         padding: 16px;
     }
 
-    .navbar__menu {
+
+
+    /* .navbar__menu {
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    } */
+    .navbar__menu>li {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: inline-block;
     }
 
+    .navbar__menu__item {
+        color: var(--color-white);
+    }
 
     .navbar__menu.open {
         display: block;
     }
 
     .navbar__logo {
-        margin-left: 0px;
+        filter: invert(65%) sepia(13%) saturate(352%) hue-rotate(2deg) brightness(95%) contrast(92%);
     }
 
     .section {
@@ -754,6 +786,7 @@ p {
 
     .story__img_description {
         padding-top: 15px;
+        text-align: center;
     }
 
     .about__majors {
@@ -777,6 +810,10 @@ p {
 
     .project {
         flex-grow: 1;
+    }
+
+    .work__projects {
+        flex-wrap: wrap;
     }
 
     .testimonial {

@@ -25,7 +25,8 @@
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <a href="#" class="navbar__logo"><img src="./imgs/logo.png" alt="cafa898-8 logo"></a>
+            <a href="#" class="navbar__logo"><img class="navbar__logo-img" src="./imgs/cafe-logo.png"
+                    alt="cafa898-8 logo"></a>
         </div>
         <div>
             <ul class="navbar__menu">
@@ -70,14 +71,16 @@
         <span class="story__img">
             <img src="./imgs/story/story.jpg" class="story__img-img" alt="cafe898-8">
             <div class="story__img_description">
-                카페898-8는 고객이 만족할 수 있도록 노력하는가게입니다. <br />
-                다년간의 준비 과정을 거쳐 특별하고 맛있는, <br />
-                음료와 최고의 프리미엄 디저트만을 선보입니다. <br />
-                <br />
-                고객님들의 100% 만족을 위해, <br />
-                하루하루 더 발전하는 카페898-8가 되겠습니다. <br />
-                <br />
-                지금처럼 많이많이 사랑해주세요 :)
+                <h2>
+                    카페898-8는 고객이 만족할 수 있도록 노력하는가게입니다. <br />
+                    다년간의 준비 과정을 거쳐 특별하고 맛있는, <br />
+                    음료와 최고의 프리미엄 디저트만을 선보입니다. <br />
+                    <br />
+                    고객님들의 100% 만족을 위해, <br />
+                    하루하루 더 발전하는 카페898-8가 되겠습니다. <br />
+                    <br />
+                    지금처럼 많이많이 사랑해주세요 :)
+                </h2>
             </div>
         </span>
     </section>
@@ -88,9 +91,13 @@
         <h2>cafe898-8의 소식</h2>
         <!-- <div class="skillset"> -->
         <!-- input carousel start-->
+        <p>
+            json file로 데이터받아와서 각 이미지마다 보여지게해도
+            좋을 것 같아
+        </p>
         <div class="slider">
             <div class="skillset__left">
-                <div id="prev">
+                <div id="prev" class="slider__btn">
                     &lt; </div>
                 <span class="posi">
                     <div class="slider__item slider__item1 showing">
@@ -100,7 +107,7 @@
                     <div class="slider__item slider__item3">
                     </div>
                 </span>
-                <div id="next">
+                <div id="next" class="slider__btn">
                     &gt;
                 </div>
             </div>
@@ -125,7 +132,7 @@
     <section id="work" class="section">
         <div class="section__container">
             <h1><i class="fas fa-mug-hot"></i> Products</h1>
-            <h2>맛도좋고, 좋은재료들만 사용하는..</br>
+            <h2>맛도좋고, 좋은재료들만 사용하는..
                 인기메뉴를 소개합니다.
             </h2>
             <br />
@@ -156,6 +163,7 @@
                             촉촉하고 부드러운 식감을 최대한 살린, 클래식한 마들렌</span>
                     </div>
                 </a>
+                <br />
                 <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank" data-type="mobile">
                     <img src="./imgs/products/green-grape.png" class="project__img" alt="green-grape ade" />
                     <div class="project__description">
@@ -183,54 +191,20 @@
                 </a>
             </div>
         </div>
-
     </section>
-
-    <!-- Testimonials -->
+    <!-- Store -->
     <section id="testimonials" class="section">
-        <div class="section__container">
-            <h1><i class="fas fa-map-marker-alt"></i> Store</h1>
-            <h3>See what they say about me</h3>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="imgs/testimonial/people1.jpg" alt="People" class="testimonial__avatar" />
-                    <div class="testimonal__speech-bubble">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Beatae eveniet quas
-                            consectetur aperiam pariatur officia nisi,
-                            inventore cumque tempore sapiente, voluptates
-                            sint iste molestiae est? Maxime tenetur
-                            voluptatem ut rem.
-                        </p>
-                        <p class="name">
-                            <a href="">Elin</a> / dinghelipiao
-                        </p>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonal__speech-bubble">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Beatae eveniet quas
-                            consectetur aperiam pariatur officia nisi,
-                            inventore cumque tempore sapiente, voluptates
-                            sint iste molestiae est? Maxime tenetur
-                            voluptatem ut rem.
-                        </p>
-                        <p class="name">
-                            <a href="">Elin</a> / dinghelipiao
-                        </p>
-                    </div>
-                    <img src="imgs/testimonial/people1.jpg" alt="People" class="testimonial__avatar" />
-                </div>
-            </div>
+        <!-- <div class="section__container"> -->
+        <h1><i class="fas fa-map-marker-alt"></i> Store</h1>
+        <h3>계산동 898-8 월드빌 1층</h3>
+        <!-- 여기는 수정해야됨 -->
+        <div class="test">
+            <img class="store__cafe-map" src="./imgs/cafa-map.png" alt="">
         </div>
-        dfdfdfd
-        dfdfdfdf
-        dfdfd
+        <div class="testimonials">
+        </div>
+        <!-- </div> -->
     </section>
-
     <!-- Contact -->
     <section id="contact" class="section contact-us">
         <h1 class="contact__title">Contact Us</h1>
@@ -249,7 +223,6 @@
             <span>All Rights Reserved &copy; Cafe898-8 CO.</span>
         </div>
     </section>
-
     <!--Arrow up-->
     <button class="arrow-up">
         <i class="fas fa-arrow-up"></i>
