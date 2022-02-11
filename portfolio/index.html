@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!--Mouse Move-->
     <img class="target" src="./imgs/macaron-ms.png" alt="macaron image">
 
     <!-- Navbar -->
@@ -30,13 +31,10 @@
         </div>
         <div>
             <ul class="navbar__menu">
-                <!-- <li class="navbar__menu__item active" data-link="#home">
-                    Home
-                </li> -->
-                <li class="navbar__menu__item" data-link="#about"> <i class="fas fa-store-alt"></i> Story</li>
-                <li class="navbar__menu__item" data-link="#skills"> <i class="far fa-clipboard"></i> Magazine</li>
-                <li class="navbar__menu__item" data-link="#work"><i class="fas fa-mug-hot"></i> Products</li>
-                <li class="navbar__menu__item" data-link="#testimonials">
+                <li class="navbar__menu__item" data-link="#story"> <i class="fas fa-store-alt"></i> Story</li>
+                <li class="navbar__menu__item" data-link="#magazine"> <i class="far fa-clipboard"></i> Magazine</li>
+                <li class="navbar__menu__item" data-link="#products"><i class="fas fa-mug-hot"></i> Products</li>
+                <li class="navbar__menu__item" data-link="#store">
                     <i class="fas fa-map-marker-alt"></i> Store
                 </li>
                 <li class="navbar__menu__item" data-link="#contact"> <i class="fab fa-instagram"></i> 인스타그램</li>
@@ -66,7 +64,7 @@
     </section>
 
     <!-- Story -->
-    <section id="about" class="section section__container story__img-bg">
+    <section id="story" class="section story__img-bg">
         <h1><i class="fas fa-store-alt"></i> Story</h1>
         <span class="story__img">
             <img src="./imgs/story/story.jpg" class="story__img-img" alt="cafe898-8">
@@ -85,105 +83,86 @@
         </span>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section">
+    <!-- Magazine -->
+    <section id="magazine" class="section">
         <h1><i class="far fa-clipboard"></i> Magazine</h1>
         <h2>cafe898-8의 소식</h2>
-        <!-- <div class="skillset"> -->
-        <!-- input carousel start-->
         <p>
             json file로 데이터받아와서 각 이미지마다 보여지게해도
             좋을 것 같아
         </p>
-        <div class="slider">
-            <div class="skillset__left">
-                <div id="prev" class="slider__btn">
+        <div class="magazine__container">
+            <div class="magazine__slider">
+                <div id="prev" class="magazine__slider-btn">
                     &lt; </div>
-                <span class="posi">
-                    <div class="slider__item slider__item1 showing">
+                <span class="magazine__img">
+                    <div class="magazine__slider-item magazine__slider-item1 showing">
                     </div>
-                    <div class="slider__item slider__item2">
+                    <div class="magazine__slider-item magazine__slider-item2">
                     </div>
-                    <div class="slider__item slider__item3">
+                    <div class="magazine__slider-item magazine__slider-item3">
                     </div>
                 </span>
-                <div id="next" class="slider__btn">
+                <div id="next" class="magazine__slider-btn">
                     &gt;
                 </div>
             </div>
-            <!-- input carousel end-->
-            <!-- <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset__title">Tools</h3>
-                    <ul class="tools__list">
-                        <li><span>Visual Studio Code</span></li>
-                        <li><span>...</span></li>
-                        <li><span>...</span></li>
-                        <li><span>...</span></li>
-                        <li><span>...</span></li>
-                    </ul>
-                </div> -->
-            <!-- </div> -->
-        </div>
         </div>
     </section>
 
-    <!-- Work -->
-    <section id="work" class="section">
-        <div class="section__container">
+    <!-- Products -->
+    <section id="products" class="section">
+        <div>
             <h1><i class="fas fa-mug-hot"></i> Products</h1>
             <h2>맛도좋고, 좋은재료들만 사용하는..
                 인기메뉴를 소개합니다.
             </h2>
             <br />
-            <div class="work__projects">
-                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank"
-                    data-type="front-end">
-                    <img src="./imgs/products/macaron.jpeg" class="project__img" alt="macaron image" />
-                    <div class="project__description">
+            <div class="products__menu">
+                <a href="#" class="products">
+                    <img src="./imgs/products/macaron.jpeg" class="product__img" alt="macaron image" />
+                    <div class="product__description">
                         <h3>마카롱</h3>
                         <span>100%아몬드 가루로 탄수화물 줄이고, 고소함 2배!</br>
                             각종 좋은재료로 만드는 달달 쫀득한 수제 마카롱!</span>
                     </div>
                 </a>
-                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank" data-type="back-end">
-                    <img src="./imgs/products/affogare.jpg" class="project__img" alt="affogato image" />
-                    <div class="project__description">
+                <a href="#" class="products">
+                    <img src="./imgs/products/affogare.jpg" class="product__img" alt="affogato image" />
+                    <div class="product__description">
                         <h3>아포가토</h3>
                         <span>하겐다즈 아이스크림과 진~하고</br>
                             향~좋은 커피를 함께 즐길 수있는 아포가토</span>
                     </div>
                 </a>
-                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank"
-                    data-type="front-end">
-                    <img src="./imgs/products/madeleine.jpg" class="project__img" alt="madeleine image" />
-                    <div class="project__description">
+                <a href="#" class="products">
+                    <img src="./imgs/products/madeleine.jpg" class="product__img" alt="madeleine image" />
+                    <div class="product__description">
                         <h3>마들렌</h3>
                         <span>프랑스 정통 구움과자!</br>
                             촉촉하고 부드러운 식감을 최대한 살린, 클래식한 마들렌</span>
                     </div>
                 </a>
                 <br />
-                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank" data-type="mobile">
-                    <img src="./imgs/products/green-grape.png" class="project__img" alt="green-grape ade" />
-                    <div class="project__description">
+                <a href="#" class="products">
+                    <img src="./imgs/products/green-grape.png" class="product__img" alt="green-grape ade" />
+                    <div class="product__description">
                         <h3>청포도에이드</h3>
                         <span>상큼달달함과 청포도 알갱이까지 씹히는!</br>
                             탄산수와의 최고의조합</span>
                     </div>
                 </a>
-                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank" data-type="back-end">
-                    <img src="./imgs/products/minicake.jpg" class="project__img" alt="mini cake" />
-                    <div class="project__description">
+                <a href="#" class="products">
+                    <img src="./imgs/products/minicake.jpg" class="product__img" alt="mini cake" />
+                    <div class="product__description">
                         <h3>미니케이크</h3>
                         <span>촉촉하고 부드러운 시트와,</br>
                             달달한 다크 초콜릿의 조화</span>
                     </div>
                 </a>
-                <a href="https://github.com/luckyjek/NFT-Hackathon" class="project" target="blank"
-                    data-type="front-end">
-                    <img src="./imgs/products/joyllypong.png" class="project__img" alt="Jollypong shake" />
-                    <div class="project__description">
+                <a href="#" class="products">
+                    <img src="./imgs/products/joyllypong.png" class="product__img" alt="Jollypong shake" />
+                    <div class="product__description">
                         <h3>조리퐁쉐이크</h3>
                         <span>죠리퐁+하겐다즈 아이스크림의 만남!</br>
                             재료를 아끼지 않고, 가득가득 들어간 천상의 조합</span>
@@ -192,20 +171,18 @@
             </div>
         </div>
     </section>
-    <!-- Store -->
-    <section id="testimonials" class="section">
-        <!-- <div class="section__container"> -->
+
+    <!-- Store-->
+    <section id="store" class="section">
         <h1><i class="fas fa-map-marker-alt"></i> Store</h1>
         <h3>계산동 898-8 월드빌 1층</h3>
         <!-- 여기는 수정해야됨 -->
         <div class="test">
             <img class="store__cafe-map" src="./imgs/cafa-map.png" alt="">
         </div>
-        <div class="testimonials">
-        </div>
-        <!-- </div> -->
     </section>
-    <!-- Contact -->
+
+    <!-- 인스타그램(contact) -->
     <section id="contact" class="section contact-us">
         <h1 class="contact__title">Contact Us</h1>
         <div class="contact__links">
@@ -213,16 +190,17 @@
                 <i class="fab fa-instagram"></i>
             </a>
             <!-- https://sebhastian.com/html-hover-text/ -->
-            <span class="hovertext" data-hover="070-4068-8988">
+            <span class="contact__text" data-hover="070-4068-8988">
                 <i class="fas fa-phone-square-alt"></i>
             </span>
         </div>
 
         <hr />
-        <div class="contact__addr ">
+        <div class="contact__addr">
             <span>All Rights Reserved &copy; Cafe898-8 CO.</span>
         </div>
     </section>
+
     <!--Arrow up-->
     <button class="arrow-up">
         <i class="fas fa-arrow-up"></i>
