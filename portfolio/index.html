@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Brush+Script&family=PT+Sans:wght@700&display=swap" rel="stylesheet" />
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b4clq7cr12"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer>
         // < i class = "fas fa-hamburger" > < /i>
@@ -49,10 +51,7 @@
     <!-- Home -->
     <section id="home">
         <div class="home__container">
-
-            <!-- <h1 class="home__title">Hello, <br />I'm FrontEnd-developer</h1> -->
             <h2 class="home__description">
-                <!-- 강조하고싶은 문장 (cafe를 잘 나타내는) -->
                 전직 디자이너가 조색 및 직접 만드는 수제 디저트
                 <br />
                 분위기에 취하고싶다면?
@@ -69,7 +68,7 @@
         <span class="story__img">
             <img src="./imgs/story/story.jpg" class="story__img-img" alt="cafe898-8">
             <div class="story__img_description">
-                <h2>
+                <p class="story__img_description-font">
                     카페898-8는 고객이 만족할 수 있도록 노력하는가게입니다. <br />
                     다년간의 준비 과정을 거쳐 특별하고 맛있는, <br />
                     음료와 최고의 프리미엄 디저트만을 선보입니다. <br />
@@ -78,7 +77,7 @@
                     하루하루 더 발전하는 카페898-8가 되겠습니다. <br />
                     <br />
                     지금처럼 많이많이 사랑해주세요 :)
-                </h2>
+                </p>
             </div>
         </span>
     </section>
@@ -86,15 +85,14 @@
     <!-- Magazine -->
     <section id="magazine" class="section">
         <h1><i class="far fa-clipboard"></i> Magazine</h1>
-        <h2>cafe898-8의 소식</h2>
-        <p>
-            json file로 데이터받아와서 각 이미지마다 보여지게해도
-            좋을 것 같아
-        </p>
+        <h2 class="magazine__main-description">cafe898-8의 소식</h2>
+        <p class="magazine__subtitle">sdfsdfdsfsdfsdf</p>
+        
         <div class="magazine__container">
             <div class="magazine__slider">
                 <div id="prev" class="magazine__slider-btn">
-                    &lt; </div>
+                    <span>&lt;</span> 
+                </div>
                 <span class="magazine__img">
                     <div class="magazine__slider-item magazine__slider-item1 showing">
                     </div>
@@ -114,7 +112,7 @@
     <section id="products" class="section">
         <div>
             <h1><i class="fas fa-mug-hot"></i> Products</h1>
-            <h2>맛도좋고, 좋은재료들만 사용하는..
+            <h2 class="produsts__main-description">맛도좋고, 좋은재료들만 사용하는..
                 인기메뉴를 소개합니다.
             </h2>
             <br />
@@ -175,10 +173,9 @@
     <!-- Store-->
     <section id="store" class="section">
         <h1><i class="fas fa-map-marker-alt"></i> Store</h1>
-        <h3>계산동 898-8 월드빌 1층</h3>
-        <!-- 여기는 수정해야됨 -->
-        <div class="test">
-            <img class="store__cafe-map" src="./imgs/cafa-map.png" alt="">
+        <h2 class="store__addr-description">계산동 898-8 월드빌 1층</h2>
+        <div class="map__container">
+            <div id="map" style="width:70%;height:400px;"></div>
         </div>
     </section>
 
@@ -194,7 +191,6 @@
                 <i class="fas fa-phone-square-alt"></i>
             </span>
         </div>
-
         <hr />
         <div class="contact__addr">
             <span>All Rights Reserved &copy; Cafe898-8 CO.</span>
@@ -205,6 +201,42 @@
     <button class="arrow-up">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <script type="text/javascript" src="/data/data.js"></script>
+    <script>
+        var mapOptions = {
+            center: new naver.maps.LatLng(37.3595704, 127.105399),
+            zoom: 10
+        };
+        
+        var map = new naver.maps.Map('map', mapOptions);
+
+        for(let i in data){
+            let target = data[i];
+            let  latlng= new naver.maps.LatLng(target.lat, target.lng);
+            console.log(latlng);
+            maker = new naver.maps.Marker({
+            map:map,
+            position: latlng,
+            icon: {
+                content:`<div style="
+                font-size:2rem;
+                border: 1px solid black;
+                background: #ff6863;
+                opacity: 0.8;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                "
+                ><div style="margin-left:2rem; font-size:3rem; color: #ff6863;">Here</div>
+                </div>`,
+            }
+        });
+        map.setZoom(14, false);
+        map.panTo(latlng);
+        }
+   
+     </script>
 </body>
 
 </html>

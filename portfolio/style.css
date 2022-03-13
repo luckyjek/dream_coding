@@ -10,6 +10,7 @@
     --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
+    --color-brown: #412e08;
     --color-blue: #73aace;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
@@ -42,7 +43,7 @@
 }
 
 body {
-    font-family: "Nanum Brush Script", sans-serif;
+    font-family: "Jua", sans-serif;
     margin: 0;
     cursor: default;
 }
@@ -198,7 +199,7 @@ p {
 .home__title,
 .home__description {
     font-size: var(--font-large);
-    color: #412e08;
+    color: var(--color-brown);
     margin-top: 10%;
 }
 
@@ -245,28 +246,34 @@ p {
     display: flex;
     align-items: center;
 }
-
+.story__img_description-font{
+    color:var( --color-brown);
+}
 /* Magazine */
 #magazine {
     background-color: var(--color-yellow);
     width: 100%;
     position: relative;
 }
-
+.magazine__main-description{
+    color:var(--color-brown);
+}
 .magazine__container {
     display: flex;
     position: relative;
     justify-content: center;
 }
-
 .magazine__slider {
-    flex-basis: 60%;
+    flex-basis: 70%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+.magazine__subtitle{
+ text-align:center;
+ margin-bottom: 1rem;
+}
 .magazine__img {
     display: flex;
     justify-content: center;
@@ -306,7 +313,7 @@ p {
 
 .magazine__slider-btn {
     background-color: var(--color-main);
-    border-radius: 50%;
+    border-radius: 1rem;
 }
 
 #prev,
@@ -315,12 +322,16 @@ p {
     z-index: 2;
     padding-left: 10px;
     color: var(--color-white);
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: 700;
     cursor: pointer;
 }
 
 /*Products*/
+.produsts__main-description{
+    color: var(--color-brown);
+}
+
 .products__menu {
     display: flex;
     flex-wrap: unset;
@@ -392,20 +403,19 @@ p {
 }
 
 /* Store */
-.test {
-    display: flex;
-    justify-content: center;
-}
-
-.store__cafe-map {
-    width: 350px;
-    height: 350px;
-}
-
-/*Store*/
 #store {
     background-color: var(--color-light-white);
+    position: relative;
 }
+.store__addr-description{
+    color:var(--color-brown);
+}
+.map__container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
 
 /*Contact*/
 #contact {
