@@ -204,15 +204,16 @@ p {
 }
 
 .home__contact {
-
-    color: var(--color-main);
+    color: var(--color-brown);
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
+    background-color: var(--color-main);
     margin: 24px;
     padding: 8px 12px;
-    border: 2px solid var(--color-main);
+    border: 1.5px solid var(--color-brown);
     border-radius: var(--size-border-radius);
     margin-top: 100px;
+    box-shadow: 0px 18px 23px 6px rgba(0,0,0,0.75);
 }
 
 
@@ -278,6 +279,11 @@ p {
     display: flex;
     justify-content: center;
 }
+.magazine__subtitle{
+    transition: all .5s ease-in-out;
+    transform: scale(0.9);
+    display: none;
+}
 
 .magazine__slider-item {
     width: 60%;
@@ -291,7 +297,6 @@ p {
     transform: scale(0.9);
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 .magazine__slider-item1 {

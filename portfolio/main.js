@@ -74,24 +74,6 @@ arrowUp.addEventListener("click", () => {
     scrollIntoView("#home");
 });
 
-//Projects
-const projectContainer = document.querySelector(".work__projects");
-const sectionIds = [
-    "#home",
-    "#story",
-    "#magazine",
-    "#products",
-    "#store",
-    "#contact",
-];
-
-//배열을 하나하나씩 돌면서 새로운 API로 변환할 수 있는것은 map
-const sections = sectionIds.map((id) => document.querySelector(id));
-const navItems = sectionIds.map((id) =>
-    document.querySelector(`[data-link="${id}"]`)
-);
-
-
 /*코드가 중복이 되므로 함수를 하나 만든다.*/
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
@@ -99,12 +81,6 @@ function scrollIntoView(selector) {
         behavior: "smooth"
     });
 }
-
-
-
-
-
-//-------------
 
 //magazine
 const firstSlide = document.querySelector('.magazine__slider-item:first-child');
@@ -126,12 +102,12 @@ function nextSlide() { //자동으로 작동하는 캐로쉘의 slide 함수와 
 }
 
 /*  nextSlide 함수에서는 다음 형제 노드를 가져왔고, 마지막 이미지 요소가 
- **  showing 클래스를 가지고 있을 때 next 버튼(오른쪽 화살표)이 click 되었다면 
- **  다시 첫번째 이미지 요소에 showing 클래스를 추가했다.
- **
- **  prevSlide 함수에서는 다음 형제 노드 대신 이전 형제 노드를 가져오는 것, 첫 이미지 요소가 
- **  showing 클래스를 가지고 있을 때 prev 버튼(왼쪽 화살표)이 click 되었다면
- **  마지막 이미지 요소에 showing 클래스를 추가하는 것이 다르다.
+ *  showing 클래스를 가지고 있을 때 next 버튼(오른쪽 화살표)이 click 되었다면 
+ *  다시 첫번째 이미지 요소에 showing 클래스를 추가했다.
+ *
+ *  prevSlide 함수에서는 다음 형제 노드 대신 이전 형제 노드를 가져오는 것, 첫 이미지 요소가 
+ *  showing 클래스를 가지고 있을 때 prev 버튼(왼쪽 화살표)이 click 되었다면
+ *  마지막 이미지 요소에 showing 클래스를 추가하는 것이 다르다.
  */
 
 function prevSlide() {
