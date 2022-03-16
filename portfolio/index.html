@@ -16,9 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Brush+Script&family=PT+Sans:wght@700&display=swap" rel="stylesheet" />
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b4clq7cr12"></script>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer>
-        // < i class = "fas fa-hamburger" > < /i>
-    </script>
+    <script src="main.js" defer></script>
+    <script src="map.js" defer></script>
+
 </head>
 
 <body>
@@ -92,9 +92,9 @@
                     <span>&lt;</span> 
                 </div>
                 <span class="magazine__img">
-                    <div class="magazine__slider-item magazine__slider-item1 showing"></div>
-                    <div class="magazine__slider-item magazine__slider-item2"></div>
-                    <div class="magazine__slider-item magazine__slider-item3"></div>
+                    <img class="magazine__slider-item1 magazine__slider-item showing" src="./imgs/magazine/macaron.jpg" alt="">
+                    <img class="magazine__slider-item2 magazine__slider-item " src="./imgs/magazine/comment.jpg" alt="">
+                    <img class="magazine__slider-item3 magazine__slider-item " src="./imgs/magazine/yogiyo.jpg" alt="">
                 </span>
                 <div id="next" class="magazine__slider-btn">
                     &gt;
@@ -197,39 +197,8 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script type="text/javascript" src="/data/data.js"></script>
     <script>
-        var mapOptions = {
-            center: new naver.maps.LatLng(37.3595704, 127.105399),
-            zoom: 10
-        };
-        
-        var map = new naver.maps.Map('map', mapOptions);
-
-        for(let i in data){
-            let target = data[i];
-            let  latlng= new naver.maps.LatLng(target.lat, target.lng);
-            console.log(latlng);
-            maker = new naver.maps.Marker({
-            map:map,
-            position: latlng,
-            icon: {
-                content:`<div style="
-                font-size:2rem;
-                border: 1px solid black;
-                background: #ff6863;
-                opacity: 0.8;
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                "
-                ><div style="margin-left:2rem; font-size:3rem; color: #ff6863;">Here</div>
-                </div>`,
-            }
-        });
-        map.setZoom(14, false);
-        map.panTo(latlng);
-        }
+       
    
      </script>
 </body>
